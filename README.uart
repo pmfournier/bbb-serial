@@ -1,0 +1,15 @@
+The BBB has 5 UARTs
+
+UART0 is used for the console via connector J1
+UART3 is transmit-only
+
+In order to be used, must load the device tree overlay. RTS/CTS support seems
+to be optional depending on the device tree overlay used.
+
+Example for UART1:
+pins: RX P9_26, TX P9_24, CTS P9_20, RTS P9_19
+echo BB-UART1 >/sys/devices/bone_capemgr.9/slots
+# UART can then be accessed at /dev/ttyO1
+
+
+Reference for uart pins: http://beaglebone.cameon.net/home/serial-ports-uart

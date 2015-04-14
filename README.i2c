@@ -1,0 +1,9 @@
+Using i2c one Beaglebone Black
+
+The easiest way is to use i2c2, known as i2c bus #1 by the kernel.
+Device: /dev/i2c-1
+
+Pins P9_19 (SCL) and P9_20 (SDA).
+
+Tools like i2cget and i2cset can be used to communicate with the device by
+command line.
